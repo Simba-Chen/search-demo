@@ -5,65 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        #main {
-            text-align: center;
-        }
-        #main > div:nth-child(2) {
-            margin-left: 25px;
-        }
-        #main > div:nth-child(3) {
-            margin-left: 50px;
-        }
-        kbd {
-            border: 1px solid red;
-            font-size: 30px;
-            display: inline-block;
-            position:relative;
-            margin: 10px 10px;
-        }
-        button {
-            position: absolute;
-            bottom: 1px;
-            right: 1px;
-            height: 12px;
-            font-size: 12px;
-            display: none;
-            border-radius: 3px;
-        }
-        kbd:hover button {
-            display: block;
-        }
-        .key {
-            width: 50px;
-            height: 40px;
-            background: linear-gradient(to bottom, #292929 0%,#111111 100%);
-            border: 1px solid #373737;
-            color: #c5c5c5;
-            border-radius: 6px;
-            box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 3px 0 2px #080808;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background:red url(./sky.png) no-repeat center center;  /*背景不重复，X轴居中Y轴居中*/
-            background-size: cover;      /*背景图片全覆盖*/
-        }
-        #main {       
-            background-color: rgb(255,255,255,0.4);
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header></header>
@@ -97,7 +39,7 @@
                 kbd.textContent = row[index2]
                 kbd.className = 'key'
                 button = document.createElement('button')
-                button.textContent = 'T'
+                button.textContent = "E"
                 button.id = row[index2]
                 button.onclick = function(message) { //message就是用户点中元素的详细信息，这个形参随意取名
                     key = message['target']['id'] //
